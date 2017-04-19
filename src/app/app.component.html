@@ -1,0 +1,80 @@
+
+<nav class="navbar navbar-light bg-faded pull-right">
+  <a class="navbar-brand pull-right" href="#">
+    <img src="favicon.ico" width="30" height="30" alt="">
+  </a>
+</nav>
+<h5>Cases</h5>
+
+<li *ngFor= "let patient of patients">
+    <span>{{patient.statusKey}}</span>
+    <span>{{patient.patientID}}</span>
+    <span>{{patient.dob}}</span>
+    <span>{{patient.name}}</span>
+    <span>{{patient.serviceID}}</span>
+    <span>{{patient.service}}</span>
+  <span>{{patients.length}}</span>
+    </li>
+
+  <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Completed Cases over the past 7 days
+        </a>
+      </h4>
+
+        </div>
+    <hr>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+        <li *ngFor= "let patient of patients">
+            <span>{{patient.statusKey}}</span>
+            <span>{{patient.patientID}}</span>
+            <span>{{patient.dob}}</span>
+            <span>{{patient.name}}</span>
+            <span>{{patient.serviceID}}</span>
+            <span>{{patient.service}}</span>
+          <span>{{patients.length}}</span>
+            </li>
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Current Cases
+        </a>
+        <hr>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                Filter Options
+              </a>
+              <hr>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              Options
+            </div>
+          </div>
+        </div>
+      </div>
+      <tr>Service Types: <span style="background-color:#008000"> &emsp;&emsp;&emsp; </span> &nbsp;Benefits Verification&nbsp; <span style="background-color:#fb9848">&emsp;&emsp;&emsp;</span> &nbsp;Prior Authorization&nbsp;<span style="background-color:#6400ba">&emsp;&emsp;&emsp;</span> &nbsp;CoPay&nbsp; <span style="background-color:#488ce7"> &emsp;&emsp;&emsp;</span> &nbsp;PAP&nbsp; <span style="background-color:#081e3c">&emsp;&emsp;&emsp;</span> &nbsp;Prescription Referral&nbsp;
+      </tr>
+      <tr> Status Key      Completed     In-Progress     Action Needed</tr>
+    </div>
+  </div>
+
+</div>
+<patient-details></patient-details>

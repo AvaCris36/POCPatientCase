@@ -1,0 +1,10 @@
+.panel-heading .accordion-toggle:after {
+    content: "+";
+    float: right;
+    color: grey;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    content: "-";
+    float: right;
+    color: grey;
+}
